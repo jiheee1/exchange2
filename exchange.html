@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>환율 계산기</title>
+
+  <style>
+    html {font-family: 'Spoqa Han Sans', 'Sans-serif'; display: block;} 
+    p{ font-size: 1em; margin: 0px; color: black;}
+    input{font-weight:100;font-size: 2em;}
+    button{font-weight:100;font-size: 1em;} }
+    body{font-weight:100;font-size: 1em; }  
+    h1{font-weight:100; color:red; font-size: 2em;}
+    h2{font-weight:100; color:blue; font-size: 1.3em; margin:0,6,0,6px;}
+    mark{opacity:10%;background:blue;}
+
+    .main{
+    width: 1000px; 
+    height:1000px; 
+ 	position: relative;
+    }
+
+    .box_usd{
+    width:384px; 
+    height:384px; 
+    position: relative; 
+    float: left;
+    border-top: 1px 
+    solid black;
+	margin:20px;
+	padding: 15px;
+	}
+    
+    .box_eur{
+    width:384px; 
+    height:384px; 
+    position: relative; 
+    float: left;
+    border-top: 1px 
+    solid black;
+	margin:20px;
+	padding: 15px;
+	}
+
+    .box_cny{
+    width:384px; 
+    height:384px; 
+    position: relative; 
+    float: left;
+    border-top: 1px 
+    solid black;
+	margin:20px;
+	padding: 15px;
+	}
+
+    .box_jpy{
+    width:384px; 
+    height:384px; 
+    position: relative; 
+    float: left;
+    border-top: 1px 
+    solid black;
+	 margin:20px;
+	 padding: 15px;
+	}
+
+ 
+
+ </style>
+</head>
+<body>
+
+	<div class="main">
+			<div class="box_usd">
+   				<p>미국_USD</p>
+   				<h1 id="display">달러 환율 계산기</h1>
+          <h2><mark><font color=white>현재의 달러 환율 1,193</mark></h2>
+          <input type="text" id="usd" placeholder="환전하고 싶은 금액($)">&nbsp;달러($)
+          <br><br>
+          <button id="action">원화(KRW)로 계산하기</button>
+		  </div>
+
+		    <div class="box_eur">
+          <p>유럽연합_EUR</p>
+         
+          <h1 id="display2">유로 환율 계산기</h1>
+          <h2><mark><font color=white>현재의 유로 환율 1,314</mark></h2>
+          <input type="text" id="eur" placeholder="환전하고 싶은 금액(€)">&nbsp;달러($)
+          <br><br>
+          <button id="action2">원화(KRW)로 계산하기</button>
+
+		    </div>
+
+		    <div class="box_cny">
+          <p>중국_CNY</p>
+
+          <h1 id="display3">위안화 환율 계산기</h1>
+          <h2><mark><font color=white>현재의 위안화 환율 167</mark></h2>
+          <input type="text" id="cny" placeholder="환전하고 싶은 금액(元)">&nbsp;달러($)
+          <br><br>
+          <button id="action3">원화(KRW)로 계산하기</button>
+          
+		    </div>
+
+		    <div class="box_jpy">
+          <p>일본_JPY</p>
+
+          <h1 id="display4">엔화 환율 계산기</h1>
+          <h2><mark><font color=white>현재의 엔화 환율 1,109</mark></h2>
+          <input type="text" id="jpy" placeholder="환전하고 싶은 금액(￥)">&nbsp;달러($)
+          <br><br>
+          <button id="action4">원화(KRW)로 계산하기</button>
+          
+		    </div>
+			
+<script>
+    //변수와 함수
+    // variable and function
+     //변수와 함수
+    // variable and function
+    action.onclick = function(){
+      console.log("OK");
+      var nowrate = 1193
+      var myUsd = usd.value
+      myWon(nowrate, myUsd);
+    }
+
+  function myWon(nowrate, usd){
+    var myWon = nowrate* usd; 
+    var Text =   "현재 환율로 " + usd + " 달러($)는 " + myWon + "원(KRW) 입니다";
+    display.innerHTML = Text;
+
+  }
+
+  </script>
+
+  <script>
+    //변수와 함수
+    // variable and function
+     //변수와 함수
+    // variable and function
+    action2.onclick = function(){
+      console.log("OK");
+      var nowrate2 = 1314
+      var myEur = eur.value
+      myWon2(nowrate2, myEur);
+    }
+
+  function myWon2(nowrate2, eur){
+    var myWon2 = nowrate2* eur; 
+    var Text =   "현재 환율로 " + eur + " 유로(€)는 " + myWon2 + "원(KRW) 입니다";
+    display2.innerHTML = Text;
+
+  }
+
+  </script>
+
+   <script>
+    //변수와 함수
+    // variable and function
+     //변수와 함수
+    // variable and function
+    action3.onclick = function(){
+      console.log("OK");
+      var nowrate3 = 167
+      var myCny = cny.value
+      myWon3(nowrate3, myCny);
+    }
+
+  function myWon3(nowrate3, cny){
+    var myWon3 = nowrate3* cny; 
+    var Text =   "현재 환율로 " + cny + " 위안(元)는 " + myWon3 + "원(KRW) 입니다";
+    display3.innerHTML = Text;
+
+  }
+
+  </script>
+
+   <script>
+    //변수와 함수
+    // variable and function
+     //변수와 함수
+    // variable and function
+    action4.onclick = function(){
+      console.log("OK");
+      var nowrate4 = 1109
+      var myJpy = jpy.value
+      myWon4(nowrate4, myJpy);
+    }
+
+  function myWon4(nowrate4, jpy){
+    var myWon4 = nowrate4* jpy; 
+    var Text =   "현재 환율로 " + jpy + " 엔(￥)은 " + myWon4 + "원(KRW) 입니다";
+    display4.innerHTML = Text;
+
+  }
+
+  </script>
+</body>
+</html>
